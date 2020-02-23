@@ -1,0 +1,20 @@
+<div class="main-container">
+  <h1 class="video-title">Moment from meeting with Two Pillars</h1>
+  <div class="video-container">
+    <video class="video-body" preload="none" #videoPlayer>
+      <source [src]="src | async" type="video/mp4" #videoSource>
+    </video>
+    <button (click)="playVideo()" class="play-button" *ngIf="!isVideoPlaying"></button>
+  </div>
+
+  <div class="conversation">
+    <div class="error" *ngIf="getTranscriptError">Error loading transcript file. Please try again later.</div>
+    <div class="utterance" *ngFor="let utterance of utterances | async">
+      <div class="speaker">{{utterance.speaker}}</div>
+      <div class="snippet" *ngFor="let snippet of utterance.snippets"
+           [ngClass]="utteranceClass(utterance)">{{snippet}}</div>
+    </div>
+  </div>
+</div>
+
+

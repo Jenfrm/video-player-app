@@ -1,0 +1,116 @@
+.main-container {
+  font-family: 'San Francisco', sans-serif;
+  margin: auto;
+  background-color: white;
+  border: 1px solid #D7DADE;
+  padding: 4.2vh 4.7vw;
+  height: 56vh;
+  width: 62vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.play-button {
+  border: none;
+  opacity: 0.8;
+  width: 48px;
+  height: 48px;
+  background: #646791;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  left: 50%;
+  margin-left: -24px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.play-button:hover {
+  opacity: 0.5;
+}
+
+.play-button::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 12px solid white;
+  display: inline-block;
+}
+
+.conversation {
+  flex: 1;
+  margin-top: 1vh;
+  overflow: auto;
+}
+
+.video-title {
+  font-size: 26px;
+  font-weight: normal;
+  color: #333333;
+  line-height: 28px;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  margin: auto;
+  display: block;
+  background: #000000;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.30);
+  border-radius: 4px;
+  width: 20.6vw;
+
+}
+
+@media (max-width: 800px) {
+  .video-container {
+    width: 100%;
+  }
+
+  .main-container {
+    height: 80vh;
+    width: 80vw;
+  }
+}
+
+
+video {
+  display: inline-block;
+  width: 100%;
+}
+
+.speaker {
+  font-size: 12px;
+  color: #333333;
+  line-height: 16px;
+  margin-left: 0.8%
+}
+
+.snippet {
+  background: #F7F7F7;
+  border-radius: 100px;
+  font-size: 15px;
+  color: #333333;
+  line-height: 20px;
+  padding: 0.8%;
+  margin-bottom: 0.1vh;
+}
+
+.snippet.cast {
+  color: #EE6EFF;
+}
+
+.snippet.rep {
+  color: #00A7D1;
+}
+
+.error {
+  background: red;
+}
